@@ -1,0 +1,22 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: graphql_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  graphql-server:
+    build:
+      context: .
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: graphql_db
+      DB_USER: postgres
+      DB_PASSWORD: postgres
