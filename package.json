@@ -1,0 +1,14 @@
+{
+  "name": "jsgql",
+  "version": "0.0.1",
+  "description": "This is a package to test graphql APIs with different server technologies and with multi resource fetching",
+  "main": "server.js",
+  "repository": "https://github.com/halimtech/jsgql.git",
+  "author": "Abdelhalim",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.8.0"
+  }
+}
